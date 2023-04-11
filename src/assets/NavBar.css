@@ -1,0 +1,127 @@
+.navbar-section {
+    background-color: #417d7a;
+    /* height: 6vh; */
+    /* height: 4em;
+    overflow: visible; */
+}
+
+.logo {
+    margin: 0;
+}
+
+.top-section {
+    margin-bottom: 1em;
+}
+
+.nav-links {
+    margin-right: 2em;
+}
+
+.search-btn {
+    background-color: #1a3c40;
+    color: white;
+    border-color: #1a3c40;
+    width: 6em;
+}
+
+.search-btn:hover {
+    background-color: #1d5c63;
+    border-color: #1d5c63;
+}
+
+.search-result {
+    background-color: white;
+    /* width: 40%; */
+    /* width: 13.15em; */
+    padding: 0;
+    margin: 0;
+    border-radius: 0.1em;
+}
+
+.search-result ul {
+    padding: 0;
+    margin: 0;
+}
+
+.search-result li {
+    /* padding: 1%; */
+    border-bottom: 1px solid #1a3c40;
+    border-radius: 0.1em;
+    /* padding: 0.2em; */
+    /* margin: 0.5em 0; */
+    color: #1a3c40;
+    font-size: 1.2em;
+    padding: 0.4em 0.2em;
+}
+
+.search-result li:hover {
+    background-color: #1a3c40;
+    color: white;
+    cursor: pointer;
+}
+
+.search-result-image {
+    height: 2.5em;
+    width: 2em;
+    margin-right: 1em;
+    border: 1px solid wheat;
+    object-fit: cover;
+    border-radius: 0.2em;
+}
+
+.book-author {
+    font-size: 0.6em;
+    font-style: italic;
+}
+
+.search-box {
+    position: relative;
+    /* overflow: visible; */
+}
+
+.search-box-items {
+    overflow: visible;
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 100;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* bottom: 100%; */
+}
+
+.search-box-items ul li {
+    list-style: none;
+}
+
+.search-bar {
+    width: 25em;
+}
+
+.dropdown-btn div {
+    /* border: 1px solid #1d5c63; */
+    border-radius: 4px;
+    color: #1a3c40;
+    padding: 0;
+}
+
+.dropdown-btn hr {
+    margin: 0;
+}
+
+.menu-item {
+    padding: 0.8em;
+    padding-bottom: 0.4em;
+    padding-top: 0.5em;
+    text-align: start;
+}
+
+.menu-item:active {
+    background-color: #1a3c40;
+    color: white;
+    border-color: #1a3c40;
+    margin-bottom: 0;
+}

@@ -1,0 +1,67 @@
+.date-filter {
+    margin: 2.5em 0;
+}
+
+.date-filter-wrapper {
+    overflow: hidden;
+    /*height: 13em;*/
+    background: #417d7a;
+    border-radius: 0.4em;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 1em 1.5em;
+
+}
+
+.date-filter-filters {
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    /*gap: 2em;*/
+    /*margin: 2em 2em;*/
+}
+
+.search-btn {
+    background-color: #1a3c40;
+    color: white;
+    border-color: #1a3c40;
+    width: 6em;
+}
+
+.search-btn:disabled {
+    background-color: #1a3c40;
+    border-color: #1a3c40;
+}
+
+.search-btn:hover {
+    background-color: #1d5c63;
+    border-color: #1d5c63;
+    transition: 0.7s;
+}
+
+.search-btn:focus-visible {
+    background-color: #1d5c63;
+    border-color: #1d5c63;
+}
+.search-btn:active {
+    background-color: #1d5c63 !important;
+    border-color: white !important;
+}
+
+
+.spinner-style-btn {
+    /*width: 6em;*/
+}
+
+.form-control:focus {
+    border-color: #417d7a;
+    box-shadow: inset 0 1px 1px rgba(3, 115, 44, 0.075),
+    0 0 8px rgba(1, 41, 32, 0.4);
+}
+
+.form-select:focus {
+    border-color: #417d7a;
+    box-shadow: inset 0 1px 1px rgba(3, 115, 44, 0.075),
+    0 0 8px rgba(1, 41, 32, 0.4);
+}

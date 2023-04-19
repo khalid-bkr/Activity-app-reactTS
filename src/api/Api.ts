@@ -3,8 +3,11 @@ import Axios, {AxiosResponse} from "axios";
 import {UserActivity} from "../types/Types";
 import {Params} from "react-router-dom";
 
+// const baseUrl: string = "http://localhost:8080/";
+const baseUrl: string = "http://activity-app.us-east-1.elasticbeanstalk.com/";
+
 const api = Axios.create({
-    baseURL: ""
+    baseURL: baseUrl
 })
 
 export const fetchActivity = async (date1: string): Promise<UserActivity> => {
@@ -42,11 +45,11 @@ export const fetchChatGptResponse= async (burnedCalories: string, question: stri
     return response.data;
 };
 
-export const fetchChatGptStream= async (burnedCalories: string, question: string): Promise<string> => {
+export const fetchChatGptStream= async (burnedCalories: string, question: string): Promise<EventSource> => {
     const calories: number = Number(burnedCalories);
-    const eventSource = new EventSource("/assistant");
-    // const eventSource = new
-    const response: AxiosResponse<string> =  await api.get("/assistant", { params: { dailyCalories: calories, question: question } });
-    return response.data;
+    const eventStream: EventSource =  await new EventSource(`${baseUrl}assistant?dailyCalories=${calories}&question=${question}`);
+    // eventStream
+    // const eventSource = new EventSource("/assistant");
+    return eventStream;
 };
 

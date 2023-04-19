@@ -16,3 +16,14 @@
     padding: 1em 1.5em;
 
 }
+
+@media (max-width: 576px) {
+    .gpt-display-filter {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+        padding: 2em 1.5em;
+
+    }
+
+}

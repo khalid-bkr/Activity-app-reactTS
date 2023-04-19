@@ -98,7 +98,7 @@ const DateFilter: React.FC<FilterProps> = (props) => {
                         <option value="BY_DATE">By Date</option>
                         <option value="BY_RANGE">By Range</option>
                     </Form.Select>
-                    <Form.Control value={date1}  onChange={(event) => setDate1(event.target.value)} type="date" />
+                    <Form.Control value={date1} onChange={(event) => setDate1(event.target.value)} type="date" />
                     { option === "BY_DATE" && (
                         <Form.Select
                             value={type}

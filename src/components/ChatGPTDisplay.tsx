@@ -2,7 +2,7 @@ import React, {useContext, useMemo, useState} from 'react';
 import {Button, Col, Container, Form, Row, Spinner} from "react-bootstrap";
 import {LOADING_REDUCER_TYPE} from "../reducers/loadingReducer";
 import {Context} from "./ContextProvider";
-import {fetchChatGptResponse} from "../api/Api";
+import {fetchChatGptResponse, fetchChatGptStream} from "../api/Api";
 import GptResponseBox from "./GptResponseBox";
 
 const ChatGptDisplay = () => {
@@ -37,7 +37,10 @@ const ChatGptDisplay = () => {
             type: LOADING_REDUCER_TYPE.UPDATE,
             payload: true,
         });
-        const eventStream: EventSource = new EventSource(`http://localhost:8080/assistant?dailyCalories=${calories}&question=${question}`)
+
+        // const eventStream: EventSource = new EventSource(`http://localhost:8080/assistant?dailyCalories=${calories}&question=${question}`)
+        const eventStream = await fetchChatGptStream(calories, question);
+
         eventStream.onopen = () => {
             console.log('Connection established.');
         };

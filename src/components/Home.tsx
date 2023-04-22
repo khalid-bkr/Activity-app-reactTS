@@ -11,7 +11,7 @@ const Home = () => {
     const loading: boolean = state.loading;
     const activities: UserActivity[] = state.activities;
     const getActivities = () : any => {
-        if (!loading && !activities.length) return "There are no Activities available";
+        // if (!loading && !activities.length) return "There are no Activities available";
         return activities.length? activities?.map((activity: any) => (
                 <Link to={`/Activity/${activity.date}`}>
                     <Activity userActivity={activity} />

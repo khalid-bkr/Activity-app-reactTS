@@ -1,3 +1,7 @@
+.search-box-style {
+    margin: 1em 0 2.5em 0;
+}
+
 .gpt-display-wrapper {
     margin: 2.5em 0;
     display: flex;
@@ -17,6 +21,31 @@
 
 }
 
+.openAI-header-style {
+    color: #ede6db;
+    border: 1px solid #1a3c40;
+    border-radius: 8px;
+    /*font-size: 4em;*/
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #1a3c40;
+    margin: 2em 0 0 0;
+    padding: 1em 1em;
+    width: fit-content;
+
+}
+
+.openAI-header-style h6 {
+    margin: 0;
+}
+
+.openAI-logo-display {
+    height: 1.2rem;
+    width: 1.2rem;
+    filter: invert(99%) sepia(98%) saturate(248%) hue-rotate(306deg) brightness(101%) contrast(86%);
+}
+
 @media (max-width: 576px) {
     .gpt-display-filter {
         display: grid;
@@ -24,6 +53,16 @@
         gap: 2em;
         padding: 2em 1.5em;
 
+    }
+    .openAI-logo-display {
+        height: 1.9rem;
+        width: 1.9rem;
+        filter: invert(99%) sepia(98%) saturate(248%) hue-rotate(306deg) brightness(101%) contrast(86%);
+    }
+
+    .openAI-header-style {
+        justify-content: center;
+        width: auto;
     }
 
 }

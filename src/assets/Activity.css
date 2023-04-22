@@ -1,16 +1,16 @@
 .card-activity {
     overflow: hidden;
     height: 13em;
-    background: white;
+    background: #1a3c40;
     border-radius: 0.3em;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     display: flex;
     /* align-items: center; */
-    color: #1a3c40;
+    color: #ede6db;
 }
 
 .card-activity:hover {
-    border: 1px solid #417d7a;
+    border: 3px solid #417d7a;
 }
 
 .card-activity h2 {
@@ -29,7 +29,8 @@
 .card-activity p {
     font-size: 12px;
     line-height: 1.4;
-    color: #1a3c40;
+    /*color: #1a3c40;*/
+    color: #ede6db;
     opacity: 0.7;
     /* margin-bottom: 0.1em;
     margin-top: 8px; */
@@ -52,9 +53,9 @@
     display: flex;
     flex-direction: column;
     justify-content: start; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-between;*/
 }
 
 .card-activity-infos > div {
@@ -72,12 +73,52 @@
     margin: 2em 2em;
 }
 
+.details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-field-style {
+    border: 1px solid #ede6db;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2em 1em;
+}
+
+@media (max-width: 992px) {
+    .activity-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+        margin: 1em 1em;
+    }
+    .date-field-style {
+        border: 1px solid #ede6db;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.2em 1em;
+    }
+}
+
+
 @media (max-width: 576px) {
     .activity-wrapper {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2em;
         margin: 1em 1em;
+    }
+    .date-field-style {
+        padding: 0.1em 1em;
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
 }

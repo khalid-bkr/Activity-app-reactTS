@@ -62,6 +62,23 @@
     margin-top: 0.5em;
 }
 
+.date-header-style {
+    color: #ede6db;
+    border: 1px solid #1a3c40;
+    border-radius: 8px;
+    /*font-size: 4em;*/
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    background-color: #1a3c40;
+    margin: 4em 0;
+    padding: 2em 1em;
+}
+
+.date-header-style h1 {
+    margin: 0;
+}
+
 @media (max-width: 576px) {
     .summaries-wrapper {
         display: grid;
@@ -77,5 +94,10 @@
         margin: 2em 2em;
         width: 100%;
     }
+    .date-header-style h1 {
+        font-size: 1.4em;
+    }
+
+
 
 }

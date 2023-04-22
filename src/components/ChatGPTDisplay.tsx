@@ -1,9 +1,10 @@
 import React, {useContext, useMemo, useState} from 'react';
-import {Button, Col, Container, Form, Row, Spinner} from "react-bootstrap";
+import {Button, Col, Container, Form, Image, Row, Spinner} from "react-bootstrap";
 import {LOADING_REDUCER_TYPE} from "../reducers/loadingReducer";
 import {Context} from "./ContextProvider";
 import {fetchChatGptResponse, fetchChatGptStream} from "../api/Api";
 import GptResponseBox from "./GptResponseBox";
+import {ReactSVG} from "react-svg";
 
 const ChatGptDisplay = () => {
 
@@ -65,7 +66,10 @@ const ChatGptDisplay = () => {
     return (
         <Container fluid className="gpt-display-wrapper">
             <Container className="">
-                <div className="date-filter">
+                <div className="openAI-header-style">
+                    <h6>Powered by OpenAI  <Image className="openAI-logo-display" src="images/openai-svg.svg"></Image></h6>
+                </div>
+                <div className="search-box-style">
                     <Form>
                         <div className="gpt-display-filter">
                             <Col sm={3}>

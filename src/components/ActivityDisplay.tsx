@@ -38,10 +38,30 @@ const ActivityDisplay = () => {
         ));
     }
 
+    const months: any = {
+        "01": "January",
+        "02": "February",
+        "03": "March",
+        "04": "April",
+        "05": "May",
+        "06": "June",
+        "07": "July",
+        "08": "August",
+        "09": "September",
+        "10": "October",
+        "11": "November",
+        "12": "December",
+    }
+    const formattedDate: string = activity.date?.replace(/(\d{4})(\d{2})(\d{2})/g, (match, p1, p2, p3) => {
+        return `${p3} ${months[p2]} ${p1}`});
+
 
     return (
         <div>
             <Container className="">
+                <div className="date-header-style">
+                    <h1>Activity Date : {formattedDate}</h1>
+                </div>
                 <div className="activity-display">
                     <h2 className="mt-3 title-style">Summary</h2>
                     <hr className="hr-style"/>

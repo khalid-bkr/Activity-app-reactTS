@@ -4,7 +4,7 @@ import {UserActivity} from "../types/Types";
 import {Params} from "react-router-dom";
 
 // const baseUrl: string = "http://localhost:8080/";
-const baseUrl: string = "http://activity-app.us-east-1.elasticbeanstalk.com/";
+const baseUrl: string = "https://backend.activity-app.site/";
 
 const api = Axios.create({
     baseURL: baseUrl
